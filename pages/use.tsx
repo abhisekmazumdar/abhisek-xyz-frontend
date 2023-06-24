@@ -5,11 +5,11 @@ import { GetStaticPropsResult } from "next"
 import { drupal } from "lib/drupal"
 import { NodeBasicPage } from "components/node--basic-page";
 
-interface NodePageProps {
+interface NodeBasicPageProps {
   node: DrupalNode
 }
 
-export default function Use({ node }: NodePageProps) {
+export default function Use({ node }: NodeBasicPageProps) {
   return (
     <Layout>
       <Head>
@@ -29,9 +29,8 @@ export default function Use({ node }: NodePageProps) {
   );
 }
 
-export async function getStaticProps(
-  context
-): Promise<GetStaticPropsResult<NodePageProps>> {
+export async function getStaticProps() {
+  // Fetch the node from Drupal.
   const node = await drupal.getResource(
     "node--page",
     "5fc90e80-dabc-4e1b-8f79-654e0bbc3275"
