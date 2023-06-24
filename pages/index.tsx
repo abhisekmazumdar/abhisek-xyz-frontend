@@ -4,34 +4,24 @@ import { DrupalNode } from "next-drupal"
 
 import { drupal } from "lib/drupal"
 import { Layout } from "components/layout"
-import { NodeArticleTeaser } from "components/node--article--teaser"
+import { NodeBasicPage } from "components/node--basic-page"
 
 interface IndexPageProps {
-  nodes: DrupalNode[]
+  node: DrupalNode
 }
 
-export default function IndexPage({ nodes }: IndexPageProps) {
+export default function IndexPage({ node }: IndexPageProps) {
   return (
     <Layout>
       <Head>
-        <title>Next.js for Drupal</title>
+        <title>Abhisek Mazumdar - abhisek.xyz</title>
         <meta
           name="description"
-          content="A Next.js site powered by a Drupal backend."
+          content="Know about Abhisek Mazumdar and his work."
         />
       </Head>
       <div>
-        <h1 className="mb-10 text-6xl font-black">Latest Articles.</h1>
-        {nodes?.length ? (
-          nodes.map((node) => (
-            <div key={node.id}>
-              <NodeArticleTeaser node={node} />
-              <hr className="my-20" />
-            </div>
-          ))
-        ) : (
-          <p className="py-4">No nodes found</p>
-        )}
+        <NodeBasicPage node={node} />
       </div>
     </Layout>
   )
@@ -40,22 +30,14 @@ export default function IndexPage({ nodes }: IndexPageProps) {
 export async function getStaticProps(
   context
 ): Promise<GetStaticPropsResult<IndexPageProps>> {
-  const nodes = await drupal.getResourceCollectionFromContext<DrupalNode[]>(
-    "node--article",
-    context,
-    {
-      params: {
-        "filter[status]": 1,
-        "fields[node--article]": "title,path,field_image,uid,created",
-        include: "field_image,uid",
-        sort: "-created",
-      },
-    }
+  const node = await drupal.getResource(
+    "node--page",
+    "c3e8796e-caae-4237-86c7-a52867139720"
   )
 
   return {
     props: {
-      nodes,
+      node,
     },
   }
 }

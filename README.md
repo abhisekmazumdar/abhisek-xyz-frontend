@@ -4,7 +4,18 @@ A simple starter for building your site with Next.js and Drupal.
 
 ## How to use
 
-`npx create-next-app -e https://github.com/chapter-three/next-drupal-basic-starter`
+All the required commands are listed below:
+
+### Start Development Server
+
+Install the the dependency:
+
+```
+npm i
+```
+
+
+To start the Next.js development server, run `npm run dev` or `yarn dev`. This starts the development server on `http://localhost:3000`.
 
 ## Deploy to Vercel
 
