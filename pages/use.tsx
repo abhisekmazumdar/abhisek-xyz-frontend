@@ -5,11 +5,11 @@ import { GetStaticPropsResult } from "next"
 import { drupal } from "lib/drupal"
 import { NodeBasicPage } from "components/node--basic-page";
 
-interface IndexPageProps {
-  node: DrupalNode[]
+interface NodePageProps {
+  node: DrupalNode
 }
 
-export default function Use({ node }: IndexPageProps) {
+export default function Use({ node }: NodePageProps) {
   return (
     <Layout>
       <Head>
@@ -31,7 +31,7 @@ export default function Use({ node }: IndexPageProps) {
 
 export async function getStaticProps(
   context
-): Promise<GetStaticPropsResult<IndexPageProps>> {
+): Promise<GetStaticPropsResult<NodePageProps>> {
   const node = await drupal.getResource(
     "node--page",
     "5fc90e80-dabc-4e1b-8f79-654e0bbc3275"
