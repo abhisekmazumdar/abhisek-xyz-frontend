@@ -11,9 +11,23 @@ interface NodeArticleTeaserProps {
 export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
   return (
     <article {...props}>
+      <div className="flex">
+
+      {node.field_image && (
+        <figure className="my-4 px-4 hidden sm:block">
+          <Image
+            src={absoluteUrl(node.field_image.uri.url)}
+            width={192}
+            height={120}
+            alt={node.field_image.resourceIdObjMeta.alt}
+          />
+        </figure>
+      )}
       <Link href={node.path.alias} className="no-underline hover:text-blue-600">
-        <h2 className="mb-4 text-4xl font-bold">{node.title}</h2>
+        <h2 className="mb-4 text-3xl font-bold">{node.title}</h2>
       </Link>
+
+      </div>
       <div className="mb-4 text-gray-600">
         {node.uid?.display_name ? (
           <span>
@@ -23,16 +37,6 @@ export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
         ) : null}
         <span> - {formatDate(node.created)}</span>
       </div>
-      {node.field_image && (
-        <figure className="my-4">
-          <Image
-            src={absoluteUrl(node.field_image.uri.url)}
-            width={768}
-            height={480}
-            alt={node.field_image.resourceIdObjMeta.alt}
-          />
-        </figure>
-      )}
       <Link
         href={node.path.alias}
         className="inline-flex items-center px-6 py-2 border border-gray-600 rounded-full hover:bg-gray-100"
