@@ -15,6 +15,7 @@ export default function IndexPage({ node }: NodeBasicPageProps) {
     <Layout>
       <Head>
         <title>Abhisek Mazumdar - abhisek.xyz</title>
+        <link rel='icon' href='/icon.png'/>
         <meta
           name="description"
           content="Know about Abhisek Mazumdar and his work."
