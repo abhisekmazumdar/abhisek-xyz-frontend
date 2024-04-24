@@ -18,7 +18,7 @@ export function Layout({ children }) {
             <Link href="/thoughts" className="hover:text-blue-600 underline">
               my thoughts
             </Link>
-            <Link href="/use" className="hover:text-blue-600 underline">
+            <Link href="/uses" className="hover:text-blue-600 underline">
               what i use
             </Link>
             <Link
