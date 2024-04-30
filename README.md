@@ -1,21 +1,30 @@
-# Basic Starter
+# What is this?
 
-A simple starter for building your site with Next.js and Drupal.
+This repository is for a website typically hosted at [abhisek.xyz](https://www.abhisek.xyz/). It utilizes Drupal as the backend for content and a Next.js codebase for the frontend.
 
 ## How to use
 
-All the required commands are listed below:
+Follow the steps below for local development:
+
+### Create the `.env.local` file
+
+Copy the `.env.example` and create a `.env.local` file with the following content:
+
+```
+NEXT_PUBLIC_DRUPAL_BASE_URL=https://your-backend-site-url.come
+NEXT_IMAGE_DOMAIN=your-backend-site-url.come
+```
 
 ### Start Development Server
 
-Install the the dependency:
+First, install the dependencies:
 
 ```
 npm i
 ```
 
 
-To start the Next.js development server, run `npm run dev` or `yarn dev`. This starts the development server on `http://localhost:3000`.
+To start the Next.js development server, run `npm run dev` or `yarn dev`. This will launch the server on `http://localhost:3000`.
 
 ## Deploy to Vercel
 
@@ -23,4 +32,4 @@ To start the Next.js development server, run `npm run dev` or `yarn dev`. This s
 
 ## Documentation
 
-See https://next-drupal.org
+For more information, visit [next-drupal.org](https://next-drupal.org).
