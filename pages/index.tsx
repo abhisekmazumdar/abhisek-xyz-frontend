@@ -1,5 +1,4 @@
 import Head from "next/head"
-import { GetStaticPropsResult } from "next"
 import { DrupalNode } from "next-drupal"
 
 import { drupal } from "lib/drupal"
