@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { DrupalNode } from "next-drupal"
+import { Metadata } from 'next';
 
 import { drupal } from "lib/drupal"
 import { Layout } from "components/layout"
@@ -9,16 +10,17 @@ interface NodeBasicPageProps {
   node: DrupalNode
 }
 
+export const metadata: Metadata = {
+  title: 'Test title',
+  description: 'This is a test description.',
+};
+
 export default function IndexPage({ node }: NodeBasicPageProps) {
   return (
     <Layout>
       <Head>
         <title>Abhisek Mazumdar - abhisek.xyz</title>
         <link rel='icon' href='/icon.png'/>
-        <meta
-          name="description"
-          content="Know about Abhisek Mazumdar and his work."
-        />
       </Head>
       <div>
         <NodeBasicPage node={node} />
