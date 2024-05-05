@@ -14,10 +14,11 @@ export default function Use({ node }: NodeBasicPageProps) {
     <Layout>
       <Head>
         <title>what I use - abhisek.xyz</title>
-        <meta
-          name="description"
-          content="Abhisek showing off his nerd side."
-        />
+        <meta name="description" content="Abhisek showing off his nerd side." />
+        <link rel='icon' href='/icon.png'/>
+        <meta property="og:title" content="what I use - abhisek.xyz" />
+        <meta property="og:description" content="Abhisek showing off his nerd side." />
+        <meta property="og:image" content="/icon.png" />
       </Head>
         <div>
           <h1 className="mb-10 text-6xl font-black">sharing my cool list</h1>

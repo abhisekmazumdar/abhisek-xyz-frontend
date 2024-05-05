@@ -14,10 +14,11 @@ export default function Thoughts({ nodes }: IndexPageProps) {
     <Layout>
       <Head>
         <title>my latest thoughts - abhisek.xyz</title>
-        <meta
-          name="description"
-          content="Abhisek showing off his thoughts here."
-        />
+        <meta name="description" content="Abhisek's console.log()." />
+        <link rel='icon' href='/icon.png'/>
+        <meta property="og:title" content="my latest thoughts - abhisek.xyz" />
+        <meta property="og:description" content="Abhisek's console.log()." />
+        <meta property="og:image" content="/icon.png" />
       </Head>
         <div>
           <h1 className="mb-10 text-6xl font-black">my latest thoughts</h1>

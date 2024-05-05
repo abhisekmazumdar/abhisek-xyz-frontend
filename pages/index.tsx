@@ -13,12 +13,16 @@ export default function IndexPage({ node }: NodeBasicPageProps) {
   return (
     <Layout>
       <Head>
-        <title>Abhisek Mazumdar - abhisek.xyz</title>
+        <title>Abhisek Mazumdar - Freelancer Drupal Developer</title>
         <link rel='icon' href='/icon.png'/>
         <meta
           name="description"
-          content="Know about Abhisek Mazumdar and his work."
+          content="I'm a proud Drupal Developer based in Pune, India with 6+ years of experience in site building, backend development, theming, and also WordPress plugin dev. For the past 3 years, I have worked with Drupal distributions and profiles."
         />
+        <meta name="keywords" content="Abhisek, Mazumdar, Drupal, React, NextJS" />
+        <meta property="og:title" content="Abhisek Mazumdar - Freelancer Drupal Developer" />
+        <meta property="og:description" content="I'm a proud Drupal Developer based in Pune, India with 6+ years of experience in site building, backend development, theming, and also WordPress plugin dev. For the past 3 years, I have worked with Drupal distributions and profiles." />
+        <meta property="og:image" content="/icon.png" />
       </Head>
       <div>
         <NodeBasicPage node={node} />
