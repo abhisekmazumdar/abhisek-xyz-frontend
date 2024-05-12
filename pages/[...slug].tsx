@@ -20,15 +20,19 @@ export default function NodePage({ resource }: NodePageProps) {
     <Layout>
       <Head>
         <title>{resource.title}</title>
-        <meta name="description" content="A Next.js site powered by Drupal." />
-        <link rel="icon" href="/icon.png" />
+        <meta name="title" content={resource.title} />
+        <meta name="description" content={resource.body?.summary} />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta property="og:title" content={resource.title} />
-        <meta property="og:description" content={resource.title} />
+        <meta property="og:description" content={resource.body?.summary} />
         <meta property="og:image" content="/abhisek.jpg" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:url" content={`https://www.abhisek.xyz/${resource.id}`} />
         <meta property="twitter:title" content={resource.title} />
-        <meta property="twitter:description" content={resource.title} />
+        <meta property="twitter:description" content={resource.body?.summary} />
         <meta property="twitter:image" content="/abhisek.jpg" />
       </Head>
       {resource.type === "node--page" && <NodeBasicPage node={resource} />}

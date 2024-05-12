@@ -14,15 +14,19 @@ export default function Use({ node }: NodeBasicPageProps) {
     <Layout>
       <Head>
         <title>what I use - abhisek.xyz</title>
-        <meta name="description" content="Abhisek showing off his nerd side." />
-        <link rel='icon' href='/icon.png'/>
+        <meta name="title" content="what I use - abhisek.xyz" />
+        <meta name="description" content={node.body?.summary} />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta property="og:title" content="what I use - abhisek.xyz" />
-        <meta property="og:description" content="Abhisek showing off his nerd side." />
+        <meta property="og:description" content={node.body?.summary} />
         <meta property="og:image" content="/abhisek.jpg" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:url" content="https://www.abhisek.xyz/uses" />
         <meta property="twitter:title" content="what I use - abhisek.xyz" />
-        <meta property="twitter:description" content="Abhisek showing off his nerd side." />
+        <meta property="twitter:description" content={node.body?.summary} />
         <meta property="twitter:image" content="/abhisek.jpg" />
       </Head>
         <div>

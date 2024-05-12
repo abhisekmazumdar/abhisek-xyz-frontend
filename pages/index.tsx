@@ -14,20 +14,23 @@ export default function IndexPage({ node }: NodeBasicPageProps) {
     <Layout>
       <Head>
         <title>Abhisek Mazumdar - Freelancer Drupal Developer</title>
-        <link rel='icon' href='/icon.png'/>
-        <meta name="title" content="Abhisek Mazumdar - Freelancer Drupal Developer"></meta>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="title" content="Abhisek Mazumdar - Drupal Developer" />
         <meta
           name="description"
-          content="I'm a proud Drupal Developer based in Pune, India with 6+ years of experience in site building, backend development, theming, and also WordPress plugin dev. For the past 3 years, I have worked with Drupal distributions and profiles."
+          content={node.body?.summary}
         />
         <meta name="keywords" content="Abhisek, Mazumdar, Drupal, React, NextJS" />
-        <meta property="og:title" content="Abhisek Mazumdar - Freelancer Drupal Developer" />
-        <meta property="og:description" content="I'm a proud Drupal Developer based in Pune, India with 6+ years of experience in site building, backend development, theming, and also WordPress plugin dev. For the past 3 years, I have worked with Drupal distributions and profiles." />
+        <meta property="og:title" content="Abhisek Mazumdar - Drupal Developer" />
+        <meta property="og:description" content={node.body?.summary} />
         <meta property="og:image" content="/abhisek.jpg" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:url" content="https://www.abhisek.xyz/" />
-        <meta property="twitter:title" content="Abhisek Mazumdar - Freelancer Drupal Developer" />
-        <meta property="twitter:description" content="I'm a proud Drupal Developer based in Pune, India with 6+ years of experience in site building, backend development, theming, and also WordPress plugin dev. For the past 3 years, I have worked with Drupal distributions and profiles." />
+        <meta property="twitter:title" content="Abhisek Mazumdar - Drupal Developer" />
+        <meta property="twitter:description" content={node.body?.summary} />
         <meta property="twitter:image" content="/abhisek.jpg" />
       </Head>
       <div>
