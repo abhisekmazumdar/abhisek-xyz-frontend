@@ -24,7 +24,12 @@ export default function NodePage({ resource }: NodePageProps) {
         <link rel="icon" href="/icon.png" />
         <meta property="og:title" content={resource.title} />
         <meta property="og:description" content={resource.title} />
-        <meta property="og:image" content="/icon.png" />
+        <meta property="og:image" content="/abhisek.jpg" />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content={`https://www.abhisek.xyz/${resource.id}`} />
+        <meta property="twitter:title" content={resource.title} />
+        <meta property="twitter:description" content={resource.title} />
+        <meta property="twitter:image" content="/abhisek.jpg" />
       </Head>
       {resource.type === "node--page" && <NodeBasicPage node={resource} />}
       {resource.type === "node--article" && <NodeArticle node={resource} />}

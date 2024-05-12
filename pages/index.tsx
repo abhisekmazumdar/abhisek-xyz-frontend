@@ -15,6 +15,7 @@ export default function IndexPage({ node }: NodeBasicPageProps) {
       <Head>
         <title>Abhisek Mazumdar - Freelancer Drupal Developer</title>
         <link rel='icon' href='/icon.png'/>
+        <meta name="title" content="Abhisek Mazumdar - Freelancer Drupal Developer"></meta>
         <meta
           name="description"
           content="I'm a proud Drupal Developer based in Pune, India with 6+ years of experience in site building, backend development, theming, and also WordPress plugin dev. For the past 3 years, I have worked with Drupal distributions and profiles."
@@ -22,7 +23,12 @@ export default function IndexPage({ node }: NodeBasicPageProps) {
         <meta name="keywords" content="Abhisek, Mazumdar, Drupal, React, NextJS" />
         <meta property="og:title" content="Abhisek Mazumdar - Freelancer Drupal Developer" />
         <meta property="og:description" content="I'm a proud Drupal Developer based in Pune, India with 6+ years of experience in site building, backend development, theming, and also WordPress plugin dev. For the past 3 years, I have worked with Drupal distributions and profiles." />
-        <meta property="og:image" content="/icon.png" />
+        <meta property="og:image" content="/abhisek.jpg" />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="https://www.abhisek.xyz/" />
+        <meta property="twitter:title" content="Abhisek Mazumdar - Freelancer Drupal Developer" />
+        <meta property="twitter:description" content="I'm a proud Drupal Developer based in Pune, India with 6+ years of experience in site building, backend development, theming, and also WordPress plugin dev. For the past 3 years, I have worked with Drupal distributions and profiles." />
+        <meta property="twitter:image" content="/abhisek.jpg" />
       </Head>
       <div>
         <NodeBasicPage node={node} />

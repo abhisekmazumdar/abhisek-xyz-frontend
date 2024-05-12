@@ -18,7 +18,12 @@ export default function Use({ node }: NodeBasicPageProps) {
         <link rel='icon' href='/icon.png'/>
         <meta property="og:title" content="what I use - abhisek.xyz" />
         <meta property="og:description" content="Abhisek showing off his nerd side." />
-        <meta property="og:image" content="/icon.png" />
+        <meta property="og:image" content="/abhisek.jpg" />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="https://www.abhisek.xyz/uses" />
+        <meta property="twitter:title" content="what I use - abhisek.xyz" />
+        <meta property="twitter:description" content="Abhisek showing off his nerd side." />
+        <meta property="twitter:image" content="/abhisek.jpg" />
       </Head>
         <div>
           <h1 className="mb-10 text-6xl font-black">sharing my cool list</h1>
