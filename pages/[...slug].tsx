@@ -28,12 +28,12 @@ export default function NodePage({ resource }: NodePageProps) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta property="og:title" content={resource.title} />
         <meta property="og:description" content={resource.body?.summary} />
-        <meta property="og:image" content="/abhisek.jpg" />
+        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_DRUPAL_BASE_URL}${resource.field_image?.uri.url}`} />
         <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content={`https://www.abhisek.xyz/${resource.id}`} />
+        <meta property="twitter:url" content={`https://www.abhisek.xyz${resource.path.alias}`} />
         <meta property="twitter:title" content={resource.title} />
         <meta property="twitter:description" content={resource.body?.summary} />
-        <meta property="twitter:image" content="https://www.abhisek.xyz/abhisek.jpg" />
+        <meta property="twitter:image" content={`${process.env.NEXT_PUBLIC_DRUPAL_BASE_URL}${resource.field_image?.uri.url}`} />
       </Head>
       {resource.type === "node--page" && <NodeBasicPage node={resource} />}
       {resource.type === "node--article" && <NodeArticle node={resource} />}

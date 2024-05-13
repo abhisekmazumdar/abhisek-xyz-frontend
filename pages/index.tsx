@@ -26,12 +26,12 @@ export default function IndexPage({ node }: NodeBasicPageProps) {
         <meta name="keywords" content="Abhisek, Mazumdar, Drupal, React, NextJS" />
         <meta property="og:title" content="Abhisek Mazumdar - Drupal Developer" />
         <meta property="og:description" content={node.body?.summary} />
-        <meta property="og:image" content="/abhisek.jpg" />
+        <meta property="og:image" content="https://www.abhisek.xyz/abhisek.jpg" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:url" content="https://www.abhisek.xyz/" />
         <meta property="twitter:title" content="Abhisek Mazumdar - Drupal Developer" />
         <meta property="twitter:description" content={node.body?.summary} />
-        <meta property="twitter:image" content="/abhisek.jpg" />
+        <meta property="twitter:image" content="https://www.abhisek.xyz/abhisek.jpg" />
       </Head>
       <div>
         <NodeBasicPage node={node} />
