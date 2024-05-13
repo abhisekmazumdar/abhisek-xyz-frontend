@@ -33,7 +33,7 @@ export default function NodePage({ resource }: NodePageProps) {
         <meta property="twitter:url" content={`https://www.abhisek.xyz/${resource.id}`} />
         <meta property="twitter:title" content={resource.title} />
         <meta property="twitter:description" content={resource.body?.summary} />
-        <meta property="twitter:image" content="/abhisek.jpg" />
+        <meta property="twitter:image" content="https://www.abhisek.xyz/abhisek.jpg" />
       </Head>
       {resource.type === "node--page" && <NodeBasicPage node={resource} />}
       {resource.type === "node--article" && <NodeArticle node={resource} />}
