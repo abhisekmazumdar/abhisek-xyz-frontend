@@ -22,12 +22,13 @@ export default function Thoughts({ nodes }: IndexPageProps) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta property="og:title" content="my latest thoughts - abhisek.xyz" />
         <meta property="og:description" content="Abhisek's console.log()." />
-        <meta property="og:image" content="/abhisek.jpg" />
+        <meta name="keywords" content="Drupal, React, NextJS, Technology, Gadgets" />
+        <meta property="og:image" content="https://www.abhisek.xyz/abhisek.jpg" />
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:url" content="https://www.abhisek.xyz/thoughts" />
         <meta property="twitter:title" content="my latest thoughts - abhisek.xyz" />
         <meta property="twitter:description" content="Abhisek's console.log()." />
-        <meta property="twitter:image" content="/abhisek.jpg" />
+        <meta property="twitter:image" content="https://www.abhisek.xyz/abhisek.jpg" />
       </Head>
         <div>
           <h1 className="mb-10 text-6xl font-black">my latest thoughts</h1>
